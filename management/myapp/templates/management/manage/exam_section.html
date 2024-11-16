@@ -1,0 +1,19 @@
+<!-- management/templates/management/admission_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>exam section Details</title>
+</head>
+<body>
+    <h1>Welcome to the exam section Details Page!</h1>
+    <p>This is where your admission details will be displayed.</p>
+
+    <!-- Link to Exam Section -->
+    <a href="{% url 'marks_section' %}">
+        <button type="button">Go Marks Section</button>
+    </a>
+
+    <a href="{% url 'admission_details' %}">Back to Home</a>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Marks</title>
+</head>
+<body>
+    <center>
+        <h2>Edit Marks for {{ form.instance.student_name }}</h2>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Update Marks</button>
+        </form>
+        <br><br>
+        <a href="{% url 'view_marks' %}">Back to Marks List</a>
+    </center>
+</body>
+</html>

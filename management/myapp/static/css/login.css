@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light gray background */
+    margin: 10px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+.container {
+    width: 400px; /* Fixed width for the form container */
+    padding: 30px;
+    background: #fff; /* White background for the form */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    text-align: center; /* Center text inside the container */
+}
+
+h2 {
+    color: #333; /* Dark gray color for the heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stack form elements vertically */
+}
+
+form p {
+    margin: 10px 0; /* Space above and below the paragraph */
+}
+
+button {
+    padding: 8px;
+    background-color: #007BFF; /* Bootstrap primary color */
+    color: white;
+    border: none;
+    border-radius: 6px; /* Rounded corners for the button */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+p {
+    margin-top: 20px; /* Space above the paragraph */
+}
+
+a {
+    color: #007BFF; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+.images{
+    display: flex;
+    justify-content: flex-start;
+    align-items: left;
+    padding-right: 500px;
+    height: 500vh; 
+}
+.logo {
+    text-align:left;
+    margin-bottom:30px;
+  }
+  .logo img {
+    text-align: left;
+    width: 200px;
+  }

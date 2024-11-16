@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Marks</title>
+</head>
+<body>
+    <center>
+        <h1>Marks List</h1>
+        <table border="1" cellpadding="10" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Student Name</th>
+                    <th>Roll Number</th>
+                    <th>Subject 1</th>
+                    <th>Subject 2</th>
+                    <th>Subject 3</th>
+                    <th>Subject 4</th>
+                    <th>Subject 5</th>
+                    <th>Actions</th> <!-- Add an actions column for edit links -->
+                </tr>
+            </thead>
+            <tbody>
+                {% for mark in marks %}
+                    <tr>
+                        <td>{{ mark.student_name }}</td>
+                        <td>{{ mark.roll_number }}</td>
+                        <td>{{ mark.subject1 }}</td>
+                        <td>{{ mark.subject2 }}</td>
+                        <td>{{ mark.subject3 }}</td>
+                        <td>{{ mark.subject4 }}</td>
+                        <td>{{ mark.subject5 }}</td>
+                        <td>
+                            <!-- Add an edit link to the update page for each student -->
+                            <a href="{% url 'edit_marks' mark.id %}">Edit</a>
+                        </td>
+                    </tr>
+                {% empty %}
+                    <tr>
+                        <td colspan="8">No marks have been entered yet.</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <br><br>
+        <a href="{% url 'add_marks' %}">Add More Marks</a>
+    </center>
+</body>
+</html>

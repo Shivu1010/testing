@@ -1,0 +1,23 @@
+<!-- management/templates/management/admission_details.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admission updates</title>
+</head>
+<body>
+    <h1>Welcome to the Admission updates Page!</h1>
+    <p>This is where your admission updates will be displayed.</p>
+
+    <!-- Link to Exam Section -->
+    <a href="{% url 'exam_section' %}">
+        <button type="button">Go to Exam Section</button>
+    </a>
+    <p>Name: </p><br>
+    <p>Address: </p><br>
+    <p>Mobile No: </p><br>
+    <p>Email: </p>
+
+    <a href="{% url 'home' %}">Back to Home</a>
+</body>
+</html>

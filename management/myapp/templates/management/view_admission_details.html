@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>View Admission Details</title>
+</head>
+<body>
+    <h2>Admission Details</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for detail in admission_details %}
+                <tr>
+                    <td>{{ detail.name }}</td>
+                    <td>{{ detail.email }}</td>
+                    <td>{{ detail.phone_number }}</td>
+                    <td>{{ detail.address }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <br>
+    <a href="{% url 'admission_details' %}">Add New Admission Details</a>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!-- management/templates/management/manage/exam_section.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Marks</title>
+</head>
+<body>
+    <center>
+        <h2>Add Student Marks</h2>
+        <form method="post" action="{% url 'add_marks' %}">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">Submit Marks</button>
+        </form>
+        <br><br>
+        <a href="{% url 'view_marks' %}">View Marks</a>
+    </center>
+</body>
+</html>

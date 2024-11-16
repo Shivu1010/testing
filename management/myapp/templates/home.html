@@ -1,0 +1,31 @@
+<!-- templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+<center>
+    <h2>Welcome to the Student</h2>
+    <a href="{% url 'admission_details' %}">
+        <button type="button">View my Admission Details</button>
+    </a>
+    <a href="{% url 'upload_myphotosign' %}">
+        <button type="submit">Upload My Photo Signature</button>
+    </a>
+     
+    <a href="{% url 'upload_documents' %}">
+        <button type="submit">Upload Documents</button>
+    </a>
+
+    <a href="{% url 'admission_updates' %}">
+        <button type="submit">Admission Updates</button>
+    </a>
+</center>
+<corner>
+    <a href="{% url 'logout' %}">Logout</a>
+</corner>
+</body>
+</html>
